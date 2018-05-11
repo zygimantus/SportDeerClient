@@ -23,6 +23,8 @@
  */
 package com.zygimantus.sportdeerclient;
 
+import java.util.Date;
+
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
@@ -33,10 +35,14 @@ import retrofit2.http.Query;
  */
 public interface SportDeer {
 
-    @GET("accessToken")
-    public Call<SportDeerAccessToken> getAccessToken(@Query("refresh_token") String refreshToken);
+	@GET("accessToken")
+	public Call<SportDeerAccessToken> getAccessToken(@Query("refresh_token") String refreshToken);
 
-    @GET("countries")
-    public Call<SportDeerCountries> getCountries(@Query("access_token") String accessToken);
+	@GET("countries")
+	public Call<SportDeerCountries> getCountries(@Query("access_token") String accessToken);
+
+	@GET("fixtures")
+	public Call<SportDeerFixtures> getFixtures(@Query("dateFrom") Date dateFrom, @Query("dateTo") Date dateTo,
+			@Query("access_token") String accessToken, @Query("page") int page);
 
 }
