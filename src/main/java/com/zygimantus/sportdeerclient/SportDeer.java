@@ -36,4 +36,7 @@ public interface SportDeer {
     @GET("accessToken")
     public Call<SportDeerAccessToken> getAccessToken(@Query("refresh_token") String refreshToken);
 
+    @GET("countries")
+    public Call<SportDeerCountries> getCountries(@Query("access_token") String accessToken);
+
 }

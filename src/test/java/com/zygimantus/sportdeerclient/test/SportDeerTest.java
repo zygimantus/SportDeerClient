@@ -26,6 +26,7 @@ package com.zygimantus.sportdeerclient.test;
 import com.zygimantus.sportdeerclient.SportDeer;
 import com.zygimantus.sportdeerclient.SportDeerAccessToken;
 import com.zygimantus.sportdeerclient.SportDeerApi;
+import com.zygimantus.sportdeerclient.SportDeerCountries;
 import com.zygimantus.sportdeerclient.Utils;
 import java.io.IOException;
 import org.apache.commons.lang.StringUtils;
@@ -54,6 +55,23 @@ public class SportDeerTest {
         Call<SportDeerAccessToken> call = api.getAccessToken(sportDeerRefreshToken);
 
         Response<SportDeerAccessToken> response = call.execute();
+
+        Assert.assertEquals(200, response.raw().code());
+    }
+
+    @Test
+    public void countriesTest() throws IOException {
+        
+        String sportDeerRefreshToken = Utils.getPropertyValueFromProperties("sportDeerRefreshToken");        
+
+        Assume.assumeTrue(StringUtils.isNotEmpty(sportDeerRefreshToken));
+
+        SportDeerApi.init();
+        SportDeer api = SportDeerApi.getApi();
+
+        Response<SportDeerAccessToken> response = api.getAccessToken(sportDeerRefreshToken).execute();
+
+        Response<SportDeerCountries> response1 = api.getCountries(response.body().getNewAccessToken()).execute();
 
         Assert.assertEquals(200, response.raw().code());
     }
