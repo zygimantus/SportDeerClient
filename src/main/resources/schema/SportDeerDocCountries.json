@@ -1,0 +1,22 @@
+{
+	"$id": "/properties/docs/items",
+	"type": "object",
+	"javaType": "com.zygimantus.sportdeerclient.SportDeerDocCountries", 		
+	"extends": {
+		"$ref": "SportDeerDoc.json"
+	},
+	"properties": {
+		"name": {
+			"$id": "/properties/docs/items/properties/name",
+			"type": "string"
+		},
+		"rectangle_flag": {
+			"$id": "/properties/docs/items/properties/rectangle_flag",
+			"type": "string"
+		},
+		"square_flag": {
+			"$id": "/properties/docs/items/properties/square_flag",
+			"type": "string"
+		}
+	}
+}

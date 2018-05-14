@@ -1,0 +1,10 @@
+{
+	"type": "object",
+	"javaType": "com.zygimantus.sportdeerclient.SportDeerDoc", 	
+	"properties": {
+		"_id": {
+			"$id": "/properties/docs/items/properties/_id",
+			"type": "integer"
+		}
+	}
+}
