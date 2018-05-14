@@ -45,4 +45,7 @@ public interface SportDeer {
 	public Call<SportDeerFixtures> getFixtures(@Query("dateFrom") Date dateFrom, @Query("dateTo") Date dateTo,
 			@Query("access_token") String accessToken, @Query("page") int page);
 
+	@GET("leagues")
+	public Call<SportDeerLeagues> getLeagues(@Query("access_token") String accessToken, @Query("page") int page);
+
 }
