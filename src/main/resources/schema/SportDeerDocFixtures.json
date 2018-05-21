@@ -3,7 +3,7 @@
 	"type": "object",
 	"javaType": "com.zygimantus.sportdeerclient.SportDeerDocFixtures", 			
 	"extends": {
-		"$ref": "SportDeerDoc.json"
+		"javaType": "com.zygimantus.sportdeerclient.SportDeerDoc"
 	},
 	"properties": {
 		"id_country": {
