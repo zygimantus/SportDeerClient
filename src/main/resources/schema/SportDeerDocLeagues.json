@@ -1,0 +1,22 @@
+{
+	"$id": "/properties/docs/items",
+	"type": "object",
+	"javaType": "com.zygimantus.sportdeerclient.SportDeerDocLeagues",
+	"extends": {
+		"javaType": "com.zygimantus.sportdeerclient.SportDeerDoc"
+	},
+	"properties": {
+		"name": {
+			"$id": "/properties/docs/items/properties/name",
+			"type": "string"
+		},
+		"id_country": {
+			"$id": "/properties/docs/items/properties/id_country",
+			"type": "integer"
+		},
+		"logo_svg": {
+			"$id": "/properties/docs/items/properties/logo_svg",
+			"type": "string"
+		}
+	}
+}

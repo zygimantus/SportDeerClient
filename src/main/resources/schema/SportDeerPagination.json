@@ -1,0 +1,22 @@
+{
+	"$id": "/properties/pagination",
+	"type": "object",
+	"properties": {
+		"total": {
+			"$id": "/properties/pagination/properties/total",
+			"type": "integer"
+		},
+		"limit": {
+			"$id": "/properties/pagination/properties/limit",
+			"type": "integer"
+		},
+		"page": {
+			"$id": "/properties/pagination/properties/page",
+			"type": "string"
+		},
+		"pages": {
+			"$id": "/properties/pagination/properties/pages",
+			"type": "integer"
+		}
+	}
+}
